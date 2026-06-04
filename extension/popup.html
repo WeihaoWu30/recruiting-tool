@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+
+    <div class="header">
+      <div class="header-left">
+        <div class="logo"></div>
+        <span class="app-name">Recruit</span>
+      </div>
+      <div class="header-right">
+        <div class="status-dot"></div>
+        <span class="status-label">Active</span>
+      </div>
+    </div>
+
+    <div class="block block--role">
+      <div class="block-label">Targeting Role</div>
+      <select id="role" class="role-select">
+        <option value="">Loading roles...</option>
+      </select>
+    </div>
+
+    <div class="grid-2">
+      <div class="block">
+        <div class="block-label">Skills</div>
+        <input id="target-skills" class="block-input" type="text" placeholder="Python, SQL…" />
+      </div>
+      <div class="block">
+        <div class="block-label">Location</div>
+        <input id="target-location" class="block-input" type="text" placeholder="City, State" />
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="block">
+        <div class="block-label">Min Exp</div>
+        <input id="experience-min" class="block-input" type="text" placeholder="3 years" />
+      </div>
+      <div class="block">
+        <div class="block-label">Tone</div>
+        <select id="message-tone" class="block-select">
+          <option value="Professional">Professional</option>
+          <option value="Friendly">Friendly</option>
+          <option value="Formal">Formal</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button id="save-campaign" class="btn btn--save">Save</button>
+      <button id="generate" class="btn btn--generate">Generate Message ✦</button>
+    </div>
+
+    <div id="error-msg" class="msg msg--error" style="display:none;"></div>
+    <div id="success-msg" class="msg msg--success" style="display:none;"></div>
+
+    <div id="results" style="display:none;">
+      <div class="divider"></div>
+      <div class="grid-2">
+        <div class="block">
+          <div class="block-label">Match Score</div>
+          <div id="score" class="score-value">—</div>
+        </div>
+        <div class="block">
+          <div class="block-label">Candidate</div>
+          <div id="candidate-name" class="score-value" style="font-size:11px;">—</div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="block-label">Generated Message</div>
+        <textarea id="message" class="message-box" readonly></textarea>
+      </div>
+    </div>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

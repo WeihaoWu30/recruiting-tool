@@ -14,6 +14,7 @@ class Candidate(models.Model):
    location = models.CharField(max_length=200, blank=True)
    linkedin_url = models.URLField(unique=True)
    skills = models.JSONField(default=list)
+   experiences = models.JSONField(default=list, blank=True)
    match_score = models.IntegerField(default=0)
    outreach_message = models.TextField(blank=True)
    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Contacted')
